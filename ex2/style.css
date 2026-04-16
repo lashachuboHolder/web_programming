@@ -1,21 +1,50 @@
-@import "tailwindcss";
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #E0E4EB;
+}
 
-/* Checkbox */
+table {
+  margin-top: 200px;
+  background: #ffff;
+  border-collapse: collapse;
+  width: 602px;
+}
+
+thead tr {
+  border-bottom: 1.5px solid #E3E5E8;
+}
+
+th, td {
+  padding: 12px ;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  color: #6f6f6f;
+  font-weight: 500;
+}
+
+td {
+  color: #6f6f6f;
+}
+
 input[type="checkbox"] {
   appearance: none;
   width: 19px;
   height: 19px;
-  border: 2px solid #d0d5de;
+  border: 2px solid #E0E4EB;
   border-radius: 5px;
   cursor: pointer;
   position: relative;
-  background: #fff;
+  background: #ffff;
 }
 
 input[type="checkbox"]:checked,
 input[type="checkbox"]:indeterminate {
-  background: #4d7fd4;
-  border-color: #4d7fd4;
+  background: #69a0ff;
+  border-color: #69a0ff;
 }
 
 input[type="checkbox"]:checked::after {
@@ -25,8 +54,8 @@ input[type="checkbox"]:checked::after {
   left: 3px;
   width: 9px;
   height: 5px;
-  border-left: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border-left: 2px solid #ffff;
+  border-bottom: 2px solid #ffff;
   transform: rotate(-45deg);
 }
 
@@ -37,12 +66,11 @@ input[type="checkbox"]:indeterminate::after {
   left: 50%;
   width: 9px;
   height: 2px;
-  background: #fff;
+  background: #ffff;
   transform: translate(-50%, -50%);
 }
 
-/* Status dot */
-[data-type]::before {
+td span::before {
   content: '';
   display: inline-block;
   width: 8px;
@@ -52,18 +80,16 @@ input[type="checkbox"]:indeterminate::after {
   vertical-align: middle;
 }
 
-[data-type="success"]::before { background: #3fba73; }
-[data-type="warning"]::before { background: #dfa230; }
-[data-type="danger"]::before  { background: #e05252; }
+td span[data-type="success"]::before { background: #00c150; }
+td span[data-type="warning"]::before { background: #ffb938; }
+td span[data-type="danger"]::before  { background: #ff0000; }
 
-/* Delete button */
-.btn-del {
+td:last-child { text-align: right; }
+
+button {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e07878' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='3 6 5 6 21 6'/%3E%3Cpath d='M19 6l-1 14H6L5 6'/%3E%3Cpath d='M10 11v6'/%3E%3Cpath d='M14 11v6'/%3E%3Cpath d='M9 6V4h6v2'/%3E%3C/svg%3E") center / 16px no-repeat;
   border: none;
   cursor: pointer;
   width: 28px;
   height: 28px;
-  opacity: 0.65;
 }
-
-.btn-del:hover { opacity: 1; }
