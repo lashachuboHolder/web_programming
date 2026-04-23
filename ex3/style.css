@@ -1,0 +1,117 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: #ffff;
+  font-family: 'Arial';
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+
+.nav-logo {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a:hover {
+  color: #ffff;
+}
+
+.btn-subscribe {
+  background: #4B4B4B;
+  color: #ffff;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.head {
+  text-align: center;
+  padding: 60px 20px 50px;
+}
+
+.slider-track {
+  display: flex;
+  gap: 24px;
+  padding: 0 calc(50% - 300px);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card {
+  min-width: 600px;
+  background: #101010;
+  border-radius: 16px;
+  display: flex;
+  overflow: hidden;
+  opacity: 0.45;
+  transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+  filter: grayscale(100%) blur(3px);
+  transform: scale(0.92);
+}
+
+.card.active {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1);
+}
+
+.card-photo {
+  width: 200px;
+  min-width: 200px;
+  overflow: hidden;
+}
+
+.card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-content h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffff;
+}
+
+.card-content .role {
+  font-size: 15px;
+  color: #868686;
+}
+
+.card-content .bio {
+  font-weight: 400;
+  font-size: 13px;
+  color: #868686;
+  line-height: 151%;
+}
+
+.linkedin-logo {
+  height: 46px;
+}
