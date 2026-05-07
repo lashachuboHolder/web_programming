@@ -1,0 +1,31 @@
+.accordion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.accordion-item {
+  padding: 24px 28px 0;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  padding: 0 0 20px;
+  text-align: left;
+}
+
+.accordion-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: gray;
+}
+
+.accordion-content {
+  padding: 16px 0 20px;
+  font-size: 15px;
+  color: gray;
+}
+

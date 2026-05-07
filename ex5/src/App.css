@@ -1,0 +1,52 @@
+.page {
+  min-height: 100vh;
+  background: white;
+  padding: 50px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.demo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section-label {
+  font-size: 14px;
+  color: gray;
+  /* i couldnt get the exact # of that */
+}
+
+.color-swatches {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.swatch {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.icons-row {
+  display: flex;
+  gap: 20px;
+}
+
+.accordion-section-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #9747FF;
+}
+
+.accordion-wrapper {
+  border: 1.5px dashed #9747FF;
+  border-radius: 4px;
+  max-width: 740px;
+  padding: 8px 0 8px;
+}
