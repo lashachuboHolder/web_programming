@@ -147,7 +147,6 @@ export default function UserTable() {
 
   return (
     <div className="card">
-      {/* Toolbar */}
       <div className="toolbar">
         <div className="toolbar-left">
           {selected.size > 0 ? (
@@ -175,7 +174,6 @@ export default function UserTable() {
         </button>
       </div>
 
-      {/* Sort pills */}
       <div className="sort-bar">
         <span className="sort-label">Sort by:</span>
         {[
@@ -193,7 +191,6 @@ export default function UserTable() {
         ))}
       </div>
 
-      {/* Table */}
       <div className="table-scroll">
         <table className="table">
           <thead>
@@ -260,7 +257,6 @@ export default function UserTable() {
         </table>
       </div>
 
-      {/* Footer / Pagination */}
       <div className="footer">
         <span className="range-info">
           {rangeStart}–{rangeEnd} of {sorted.length}
