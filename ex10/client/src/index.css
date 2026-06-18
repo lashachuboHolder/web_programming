@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Tab content fade-slide animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Tab content re-animates when key changes */
+.tab-content {
+  animation: fadeInUp 0.4s ease;
+}
+
+/* Staggered card entrance delays */
+.card-stagger-1 { animation-delay: 0ms; opacity: 0; animation-fill-mode: forwards; }
+.card-stagger-2 { animation-delay: 80ms; opacity: 0; animation-fill-mode: forwards; }
+.card-stagger-3 { animation-delay: 160ms; opacity: 0; animation-fill-mode: forwards; }
+.card-stagger-4 { animation-delay: 240ms; opacity: 0; animation-fill-mode: forwards; }
+.card-stagger-5 { animation-delay: 320ms; opacity: 0; animation-fill-mode: forwards; }
+.card-stagger-6 { animation-delay: 400ms; opacity: 0; animation-fill-mode: forwards; }
+.card-stagger-7 { animation-delay: 480ms; opacity: 0; animation-fill-mode: forwards; }
